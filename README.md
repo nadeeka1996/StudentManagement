@@ -1,4 +1,4 @@
-# TasksManagement System
+# StudentManagement System
 
 A full-stack Student management application built with **.NET 8 (Web API)** and **Angular 19**. The app supports user authentication and CRUD operations for tasks with history tracking.
 

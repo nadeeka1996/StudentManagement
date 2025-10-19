@@ -1,0 +1,46 @@
+<div>
+  <h2>{{ student ? "Edit Student" : "Register New Student" }}</h2>
+
+  <form [formGroup]="taskForm" (ngSubmit)="onSave()">
+    <div class="name-row">
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="firstName" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastName" required />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+    </mat-form-field>
+
+   <mat-form-field appearance="fill" class="full-width">
+  <mat-label>Birth date</mat-label>
+  <input
+    matInput
+    [matDatepicker]="picker"
+    formControlName="birthDate"
+    required
+  />
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+    <div class="category-preview" *ngIf="taskForm.get('birthDate')?.value">
+      <p>Computed category: <strong>{{ computeCategoryFromBirthDate(taskForm.get('birthDate')?.value) }}</strong></p>
+    </div>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" type="submit">
+    {{ student ? "Update" : "Register" }}
+      </button>
+      <button mat-button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

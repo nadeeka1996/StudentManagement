@@ -1,0 +1,10 @@
+﻿global using Microsoft.AspNetCore.Diagnostics;
+global using Microsoft.AspNetCore.Mvc;
+global using StudentManagement.Application.Interfaces.Services;
+global using StudentManagement.Application.Models.Requests;
+global using StudentManagement.Application.Models.Responses;
+global using System.Text.Json;
+global using StudentManagement.Application.Models.Requests.Auth;
+global using StudentManagement.Application;
+global using StudentManagement.Infrastructure;
+global using StudentManagement.Presentation;

@@ -1,0 +1,22 @@
+﻿global using Microsoft.AspNetCore.Authentication;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Options;
+global using StudentManagement.Application.Interfaces.Repositories.Base;
+global using StudentManagement.Domain.Entities.Base;
+global using StudentManagement.Infrastructure.Data;
+global using StudentManagement.Infrastructure.Repositories;
+global using StudentManagement.Infrastructure.Repositories.Base;
+global using System.Linq.Expressions;
+global using System.Security.Claims;
+global using System.Text.Encodings.Web;
+global using StudentManagement.Application.Common;
+global using StudentManagement.Application.Interfaces.Services;
+global using StudentManagement.Application.Interfaces.Repositories;
+global using StudentManagement.Domain.Entities;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using StudentManagement.Application.Interfaces.UnitOfWorks;
+global using StudentManagement.Infrastructure.Authentication;
+global using StudentManagement.Infrastructure.UnitOfWorks;
+

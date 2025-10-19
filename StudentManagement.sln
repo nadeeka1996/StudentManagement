@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11111.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement.Presentation", "StudentManagement.Presentation\StudentManagement.Presentation.csproj", "{7063FD18-6709-4FF5-8C42-FA9086D15991}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement.Application", "StudentManagement.Application\StudentManagement.Application.csproj", "{24EF6EAF-581E-4F01-A02A-804D55B42ECA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement.Infrastructure", "StudentManagement.Infrastructure\StudentManagement.Infrastructure.csproj", "{EFAFA530-D6C2-44C8-A768-9C2E0F680BC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement.Domain", "StudentManagement.Domain\StudentManagement.Domain.csproj", "{2E2144E8-F4FB-40B3-9867-DE7C01DBED46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90D36B88-0960-42A0-998B-47DA0FE80F97}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApps", "ClientApps", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScripts", "DbScripts", "{F93B636C-0DF4-4DC1-B244-32C3AB17004F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "task-management-app", "ClientApps\student-management-app\", "{8DAB75BC-7AF5-4BA9-A104-FC9D82096832}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65153"
+		Debug.AspNetCompiler.PhysicalPath = "ClientApps\student-management-app\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65153\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65153"
+		Release.AspNetCompiler.PhysicalPath = "ClientApps\student-management-app\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65153\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65153"
+		SlnRelativePath = "ClientApps\student-management-app\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7063FD18-6709-4FF5-8C42-FA9086D15991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7063FD18-6709-4FF5-8C42-FA9086D15991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7063FD18-6709-4FF5-8C42-FA9086D15991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7063FD18-6709-4FF5-8C42-FA9086D15991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EF6EAF-581E-4F01-A02A-804D55B42ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EF6EAF-581E-4F01-A02A-804D55B42ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EF6EAF-581E-4F01-A02A-804D55B42ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EF6EAF-581E-4F01-A02A-804D55B42ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFAFA530-D6C2-44C8-A768-9C2E0F680BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAFA530-D6C2-44C8-A768-9C2E0F680BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAFA530-D6C2-44C8-A768-9C2E0F680BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAFA530-D6C2-44C8-A768-9C2E0F680BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2144E8-F4FB-40B3-9867-DE7C01DBED46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2144E8-F4FB-40B3-9867-DE7C01DBED46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2144E8-F4FB-40B3-9867-DE7C01DBED46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2144E8-F4FB-40B3-9867-DE7C01DBED46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DAB75BC-7AF5-4BA9-A104-FC9D82096832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DAB75BC-7AF5-4BA9-A104-FC9D82096832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DAB75BC-7AF5-4BA9-A104-FC9D82096832}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DAB75BC-7AF5-4BA9-A104-FC9D82096832}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DAB75BC-7AF5-4BA9-A104-FC9D82096832} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6817EAE-D219-4040-819B-682AFD260BE9}
+	EndGlobalSection
+EndGlobal

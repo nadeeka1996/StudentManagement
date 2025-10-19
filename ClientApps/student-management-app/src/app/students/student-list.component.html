@@ -1,0 +1,124 @@
+<app-toolbar title="Students" [showDashboardButton]="true"></app-toolbar>
+
+<div class="container" style="margin: 0px 16px">
+  <div class="student-box">
+    <div class="actions">
+      <div style="margin: 16px 0px">
+        <button mat-raised-button color="primary" (click)="openAddPopup()">
+          <mat-icon>add</mat-icon>
+          Register Student
+        </button>
+      </div>
+    </div>
+
+    <div class="searchbar-container">
+      <div class="search-and-filters">
+        <mat-form-field appearance="outline" class="searchbar">
+          <mat-icon matPrefix>search</mat-icon>
+          <input
+            matInput
+            [(ngModel)]="searchTerm"
+            (input)="applyFilter($event)"
+            placeholder="Search students by name or email"
+          />
+          <button
+            *ngIf="searchTerm"
+            mat-icon-button
+            matSuffix
+            (click)="clearSearch()"
+            aria-label="Clear search"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="category-filter">
+          <mat-label>Category</mat-label>
+          <mat-select [(ngModel)]="categoryFilter" (selectionChange)="applyFilter($event)">
+            <mat-option value="">All</mat-option>
+            <mat-option value="Primary">Primary</mat-option>
+            <mat-option value="Middle School">Middle School</mat-option>
+            <mat-option value="Upper School">Upper School</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table
+        mat-table
+        [dataSource]="filteredTasks"
+  class="mat-elevation-z2 student-table"
+        matSort
+      >
+        <ng-container matColumnDef="name">
+
+        </ng-container>
+
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>First name</th>
+          <td mat-cell *matCellDef="let s">{{ s.firstName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Last name</th>
+          <td mat-cell *matCellDef="let s">{{ s.lastName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+          <td mat-cell *matCellDef="let s">{{ s.email }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="birthDate">
+          <th mat-header-cell *matHeaderCellDef>Birth Date</th>
+          <td mat-cell *matCellDef="let s">{{ s.birthDate }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef>Category</th>
+          <td mat-cell *matCellDef="let s">{{ getCategoryName(s.category) }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let s">
+            <div class="action-row">
+              <button mat-button color="accent" (click)="edit(s)">
+                <mat-icon>edit</mat-icon>
+                <span class="action-label">Edit</span>
+              </button>
+
+              <button mat-button color="warn" (click)="delete(s.id)">
+                <mat-icon>delete</mat-icon>
+                <span class="action-label">Delete</span>
+              </button>
+            </div>
+          </td>
+          
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="popupVisible" class="modal-overlay">
+    <div class="modal-content">
+    <app-student-popup
+      [student]="editingStudent"
+      (save)="onSave($event)"
+      (cancel)="onCancel()"
+    ></app-student-popup>
+  </div>
+</div>
+
+<app-message-popup
+  *ngIf="popupMessage"
+  [message]="popupMessage"
+  [type]="popupType"
+  (close)="popupMessage = null"
+></app-message-popup>

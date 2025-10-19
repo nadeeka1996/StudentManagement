@@ -1,19 +1,19 @@
 # TasksManagement System
 
-A full-stack task management application built with **.NET 8 (Web API)** and **Angular 19**. The app supports user authentication and CRUD operations for tasks with history tracking.
+A full-stack Student management application built with **.NET 8 (Web API)** and **Angular 19**. The app supports user authentication and CRUD operations for tasks with history tracking.
 
 ---
 
 ## 🧱 Project Structure
 
 ```
-/TasksManagement               # .NET 8 backend (Web API)
-└── TasksManagement.Presentation
-└── TasksManagement.Application
-└── TasksManagement.Domain
-└── TasksManagement.Infrastructure
+/StudentManagement               # .NET 8 backend (Web API)
+└── StudentManagement.Presentation
+└── StudentManagement.Application
+└── StudentManagement.Domain
+└── StudentManagement.Infrastructure
 
-/task-management-app                    # Angular 19 frontend
+/student-management-app                    # Angular 19 frontend
 └── src
 └── angular.json
 └── package.json
@@ -39,27 +39,27 @@ A full-stack task management application built with **.NET 8 (Web API)** and **A
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/nadeeka1996/TasksManagement.git
-cd TasksManagement
+git clone https://github.com/nadeeka1996/StudentManagement.git
+cd StudentManagement
 ```
 
 ---
 
 ### 2. Configure the Backend
 
-- Open `appsettings.json` in `TasksManagement.Presentation`
+- Open `appsettings.json` in `StudentManagement.Presentation`
 - Update the connection string:
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=TasksDb;Trusted_Connection=True;"
+  "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=StudentManagementDb;Trusted_Connection=True;"
 }
 ```
 
 - Run migrations scripts:
 
 ```bash
-cd TasksManagement.Infrastructure
+cd StudentManagement.Infrastructure
 dotnet ef database update
 ```
 #### ✅ Optionally, you can run the script file DbSchema.sql.
@@ -67,7 +67,7 @@ dotnet ef database update
 ### 3. Run the Backend API
 
 ```bash
-dotnet run --project TasksManagement.Presentation
+dotnet run --project StudentManagement.Presentation
 ```
 
 > API runs on `https://localhost:7295` by default.
@@ -77,7 +77,7 @@ dotnet run --project TasksManagement.Presentation
 ### 4. Setup and Run the Angular Frontend
 
 ```bash
-cd task-management-app
+cd student-management-app
 npm install
 ng serve --open
 ```
@@ -88,21 +88,10 @@ ng serve --open
 
 ### 5. Log in with Default User or Create New via Swagger
 
-#### ✅ Option 1: Use Default User (Recommended for First-Time Setup)
+#### ✅ Option 1: Use  User (Recommended for First-Time Setup)
+Email : admin@gmail.com
+PW : admin@96
 
-When you run the provided sample SQL data script, a **default user** is created:
-
-```json
-{
-  "name": "John Doe",
-  "email": "john.doe@example.com",
-  "password": "123456"
-}
-```
-
-You can use this user to log in to the system immediately.
-
----
 
 #### ✳️ Option 2: Create a New User via Swagger (Optional)
 
@@ -114,14 +103,7 @@ If you want to register a new user:
 2. **Register a New User**  
    Use `POST /api/auth/register` with:
 
-   ```json
-   {
-     "name": "Jane Smith",
-     "email": "jane@example.com",
-     "password": "Password@123"
-   }
-   ```
----
+  
 
 
 ## 📦 Technologies Used
@@ -139,10 +121,4 @@ If you want to register a new user:
 
 ---
 
-## ✅ TODO / Features
-
-- [x] User login
-- [x] Task CRUD
-
----
 
